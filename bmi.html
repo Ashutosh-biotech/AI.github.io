@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="shortcut icon" href="Ai.png" type="image/x-icon" />
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Body Mass Index</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<style type="text/css" media="screen">
+			body{
+				background-image: linear-gradient(to right,#ffff00,#bfff00,#80ff00,#40ff00,#00ff00,#00ff40,#00ff80,#00ffbf,#00ffff);
+			}
+
+			#card_head{
+				font-weight: bolder;
+			}
+
+			#card_head:hover{
+				color: red;
+			}
+
+			#body{
+				margin-top: 30px;
+			}
+
+			#bmi{
+				height: 50px;
+				text-align: center;
+				color: black;
+				background-color: white;
+				transition: all;
+				transition-timing-function: ease-in-out;
+				transition-duration: 2s;
+				font-size: 30px;
+			}
+
+			#bmi:hover{
+				border-color: white;
+				border-radius: 30px; 
+				color: white;
+				background-color: black;
+			}
+
+			#button{
+				font-size: 30px;
+				width: 300px;
+				border-radius: 50px;
+			}
+
+			#result{
+				text-align: center;
+				border-radius: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" id="body">
+			<div class="card">
+				<div class="card-header text-center text-uppercase display-1" id="card_head">BMI calculator</div>
+				<div class="card-body">
+					<form action="bmi_submit" method="get" accept-charset="utf-8">
+						<div class="form-group">
+							<label> Weight:</label>
+							<input type="number" placeholder="Enter your Weight (in kg)" class="form-control" id="weight" min="1" />
+						</div>
+						<div class="form-group">
+							<label> Height:</label>
+							<input type="number" placeholder="Enter your Height (in feet)" class="form-control" id="feet" min="1" />
+							<input type="number" placeholder="Enter your Height (in inches)" class="form-control" id="inches" min="1" />
+						</div>
+						<div class="form-group">
+							<label>BMI Value</label>
+							<span class="form-control" id="bmi"></span>
+							<span class="form-control" id="result"></span>
+						</div>
+						<div class="form-group">
+							<center><input type="button" value="Check BMI" class="btn btn-success form-control" onclick="bmivalue()" id="button"/></center>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" async defer>
+		function bmivalue() {
+			// body...
+			debugger
+			var weight = document.getElementById('weight').value;
+			var feet = document.getElementById('feet').value;
+			var inches = document.getElementById('inches').value;
+			var feet = feet*0.30;
+			var inches = inches*0.025;
+			var height = feet+inches;
+			var height = height*height;
+			var bmival = (weight/height).toFixed(2);
+			document.getElementById("bmi").innerHTML = bmival;
+			if (bmival>40) {
+				document.getElementById("result").innerHTML = "Extreme obesy";
+				document.getElementById("result").style.color="red";
+			} else if (bmival>30){
+				document.getElementById("result").innerHTML = "Obesy";
+				document.getElementById("result").style.color="orange";
+			} else if (bmival>25){
+				document.getElementById("result").innerHTML = "Over weight";
+				document.getElementById("result").style.color="#00ffff";
+			} else if (bmival>18){
+				document.getElementById("result").innerHTML = "Normal";
+				document.getElementById("result").style.color="green";
+			} else{
+				document.getElementById("result").innerHTML = "Under Weight";
+				document.getElementById("result").style.color="blue";
+			}
+		}
+	</script>
+</html>

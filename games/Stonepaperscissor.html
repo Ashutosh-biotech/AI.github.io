@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="../Ai.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Stone Paper Scissor</title>
+		<link rel="stylesheet" href="../bootstrap.min.css">
+		<style type="text/css" media="screen">
+			body{
+				background-image: linear-gradient(to left top,#ff0000,#ff4000,#ff8000,#ffbf00,#ffff00,#bfff00,#80ff00,#40ff00,#00ff00);
+				background-size: cover;
+			}
+			.user{
+				margin-left: 5px;
+				border-color: red;
+				border-radius: 20px;
+				border-width: 10px;
+				cursor: pointer;
+			}
+			.user:hover{
+				border-color: green;
+				outline-style: none;
+			}
+			p{
+				display: inline-block;
+				margin: 20px;
+			}
+			#answer{
+				cursor: pointer;
+				border-radius: 30px;
+				border-width: 10px;
+				padding: 20px;
+				margin: 20px;
+				outline-style: none;
+				font-size: 25px;
+				background-color: black;
+				color: white;
+				border-color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="text-center alert alert-success">
+				<b>sTONe pApEr sCIsSOr</b>
+			</div>
+			<div class="align-items-center">
+				<br>
+				<center>
+				<button class="user" onclick="stone()" style="outline-style: none;"><img src="stone.jpg" alt="stone"></button>
+				<button class="user" onclick="paper()" style="outline-style: none;"><img src="paper.jpg" alt="paper"></button>
+				<button class="user" onclick="scissor()" style="outline-style: none;"><img src="scissor.jpg" alt="scissor"></button>
+				</center>
+			</div>
+			<br>
+			<div class="text-center">
+				<p style="font-size: 30px; color: blue;" id="player">YOU</p>
+				<p id="choice"><img src="stone.png" alt="" height="250" width="250"></p>
+				<p id="random"><img src="paper.png" alt="" height="250" width="250"></p>
+				<p style="font-size: 30px; color: blue;">COMPUTER</p>
+			</div>
+			<center><button type="reset" id="answer" class="text-uppercase">gAME has nOT sTaRtEd</button></center>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" async defer>
+		alert("choose your option and Play");
+		var name = window.prompt("Enter Your Name","");
+		var name = name.toUpperCase();
+		if (name != "") {
+			document.getElementById('player').innerHTML=name;
+		} else if (name == ""){
+			document.getElementById('player').innerHTML="YOU";
+		}else {
+			document.getElementById('player').innerHTML="YOU";
+		}
+		
+		var no = document.getElementById('player').innerHTML;
+		if (no == "NULL"){
+			alert("Oooo! no you are not ready to play 🤖🤖🤖");
+			window.location.assign("../index.html");
+		}
+		function stone(){
+			// body...
+			debugger
+			var stone = 1;
+			document.getElementById('choice').innerHTML='<img src="stone.png" alt="" height="250" width="250">';
+			var comp = Math.floor(Math.random()*3);
+			if (comp == 1) {
+				document.getElementById('random').innerHTML='<img src="stone.png" alt="" height="250" width="250">';
+			} else if (comp == 0) {document.getElementById('random').innerHTML='<img src="scissor.png" alt="" height="250" width="250">';
+			}else {document.getElementById('random').innerHTML='<img src="paper.png" alt="" height="250" width="250">';}
+
+			if (stone == comp) {
+				document.getElementById('answer').innerText="DRAW";
+			} else if (stone > comp){
+				document.getElementById('answer').innerText="You Won😃😃😃";
+			} else{
+				document.getElementById('answer').innerText="You lose😱😱😱"
+			}
+		}
+		function paper(){
+			// body...
+			debugger
+			var paper = 1;
+			document.getElementById('choice').innerHTML='<img src="paper.png" alt="" height="250" width="250">';
+			var comp = Math.floor(Math.random()*3);
+			if (comp == 1) {
+				document.getElementById('random').innerHTML='<img src="paper.png" alt="" height="250" width="250">';
+			} else if (comp == 0) {document.getElementById('random').innerHTML='<img src="stone.png" alt="" height="250" width="250">';
+			}else {document.getElementById('random').innerHTML='<img src="scissor.png" alt="" height="250" width="250">';}
+
+			if (paper == comp) {
+				document.getElementById('answer').innerText="DRAW";
+			} else if (paper > comp){
+				document.getElementById('answer').innerText="You Won😃😃😃";
+			} else{
+				document.getElementById('answer').innerText="You lose😱😱😱"
+			}
+		}
+		function scissor(){
+			// body...
+			debugger
+			var scissor = 1;
+			document.getElementById('choice').innerHTML='<img src="scissor.png" alt="" height="250" width="250">';
+			var comp = Math.floor(Math.random()*3);
+			if (comp == 1) {
+				document.getElementById('random').innerHTML='<img src="scissor.png" alt="" height="250" width="250">';
+			} else if (comp == 0) {document.getElementById('random').innerHTML='<img src="paper.png" alt="" height="250" width="250">';
+			}else {document.getElementById('random').innerHTML='<img src="stone.png" alt="" height="250" width="250">';}
+
+			if (scissor == comp) {
+				document.getElementById('answer').innerText="DRAW";
+			} else if (scissor > comp){
+				document.getElementById('answer').innerText="You Won😃😃😃";
+			} else{
+				document.getElementById('answer').innerText="You lose😱😱😱"
+			}
+		}
+	</script>
+</html>

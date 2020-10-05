@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="../Ai.png" rel="icon">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>LUDO DICE</title>
+	<style type="text/css" media="screen">
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			background-image: linear-gradient(to right, #e57713, #ec9400, #eeb000, #eace00, #e2eb12);
+		}
+
+		.content{
+			text-align: center;
+		}
+
+		.game{
+			text-align: center;
+			display: inline-block;
+		}
+
+		.game p img{
+			border-radius: 20px;
+		}
+
+		.content button{
+			background-color: green;
+			border-radius: 30px;
+			font-weight: bold;
+			font-size: 30px;
+			padding: 10px 30px;
+		}
+
+		#status{
+			font-size: 40px;
+			color: white;
+			font-weight: bolder;
+		}
+
+		.name{
+			font-family: Algerian;
+			font-size: 30px;
+			margin: 5px;
+		}
+
+		#name{
+			font-family: Algerian;
+			font-size: 30px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<p id="status">LUDO DICE</p>
+		<div class="game">
+			<p id="name">YOU</p>
+			<p id="player"><img src="dice6.png" width="350" height="350" style="margin-right: 10px;"></p>
+		</div>
+		<div class="game">
+			<p class="name">COMPUTER</p>
+			<p id="comp"><img src="dice6.png" width="350" height="350" style="margin-left: 10px;"></p>
+		</div>
+		<br>
+		<button type="button" onclick="play()" id="button">PLAY</button>
+	</div>
+</body>
+<script>
+	debugger
+	var name = window.prompt("Enter Your Name","");
+	if(name != ""){
+		var name = name.toUpperCase();
+		document.getElementById('name').innerHTML=name;
+	}else{
+		document.getElementById('name').innerHTML="YOU";
+	}
+	var no = document.getElementById('name').innerHTML;
+	if (no == "NULL"){
+		alert("Oooo! no you are not ready to play 🤖🤖🤖");
+		window.location.assign("../index.html");
+	}
+	function play() {
+		debugger
+		// body...
+		document.getElementById('button').innerHTML='REPLAY';
+		var player = Math.floor(Math.random()*6);
+		var comp = Math.floor(Math.random()*6);
+		if (player == 0) {
+			document.getElementById('player').innerHTML='<img src="dice1.png" width="350" height="350" style="margin-right: 10px;">';
+		} else if (player == 1) {
+			document.getElementById('player').innerHTML='<img src="dice2.png" width="350" height="350" style="margin-right: 10px;">';
+		}else if (player == 2) {
+			document.getElementById('player').innerHTML='<img src="dice3.png" width="350" height="350" style="margin-right: 10px;">';
+		}else if (player == 3) {
+			document.getElementById('player').innerHTML='<img src="dice4.png" width="350" height="350" style="margin-right: 10px;">';
+		}else if (player == 4) {
+			document.getElementById('player').innerHTML='<img src="dice5.png" width="350" height="350" style="margin-right: 10px;">';
+		}else{document.getElementById('player').innerHTML='<img src="dice6.png" width="350" height="350" style="margin-right: 10px;">';}
+
+		if (comp == 0) {
+			document.getElementById('comp').innerHTML='<img src="dice1.png" width="350" height="350" style="margin-right: 10px;">';
+		} else if (comp == 1) {
+			document.getElementById('comp').innerHTML='<img src="dice2.png" width="350" height="350" style="margin-right: 10px;">';
+		}else if (comp == 2) {
+			document.getElementById('comp').innerHTML='<img src="dice3.png" width="350" height="350" style="margin-right: 10px;">';
+		}else if (comp == 3) {
+			document.getElementById('comp').innerHTML='<img src="dice4.png" width="350" height="350" style="margin-right: 10px;">';
+		}else if (comp == 4) {
+			document.getElementById('comp').innerHTML='<img src="dice5.png" width="350" height="350" style="margin-right: 10px;">';
+		}else{document.getElementById('comp').innerHTML='<img src="dice6.png" width="350" height="350" style="margin-right: 10px;">';}
+
+		if (player>comp) {document.getElementById('status').innerHTML='You Won👏👌🤘';} else if(comp>player){document.getElementById('status').innerHTML='You Lose😢😭😱';}else{document.getElementById('status').innerHTML='DRAW';}
+	}
+</script>
+</html>

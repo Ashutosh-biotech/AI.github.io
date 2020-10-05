@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="icon" href="Ai.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>ABOUT ME</title>
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<style type="text/css" media="screen">
+			.text:before{
+				font-weight: bolder;
+				font-size: 50px;
+			 	color: blue;
+			 	content: " ";
+				animation-name: texthange;
+				animation-duration: 100s;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+			}
+
+			@keyframes texthange{
+				0%{content: "ASHUTOSH KUMAR";color: red;}
+				20%{content: "WEB DEVELOPER";color: orange;}
+				40%{content: "ARTIST";color: cyan;}
+				60%{content: "ENVIROMENT LOVER";color: blue;}
+				80%{content: "BIOLOGY STUDENT";color: green;}
+				100%{content: "ASHUTOSH KUMAR";color: purple;}
+			}
+
+			body {
+				background-color: black;
+			}
+
+			.mycontent{
+				text-align: center;
+				color: #ffff00;
+				font-size: 20px;
+				margin:  0vw 30vw;
+			}
+
+			.form{
+				margin: 0vw 10vw 5vw 10vw;
+				color: red;
+			}
+
+			form  h1{
+				color: yellow;
+				content: "";
+			}
+
+			.form:hover h1:after{
+				content: " ON";
+				color: #00ff00;
+			}
+		</style>
+	</head>
+	<body>
+		<CENTER>
+		<br>
+		<div class="container alert-warning alert font-weight-bold">
+			<font size="5">ABOUT ME</font>
+		</div>
+		<div>
+            <img src="1 (33).jpg" alt="ASHUTOSH KUMAR" height="350" width="270" style="border-radius: 20px;display: inline;">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p class="text" style="display: inline;"><!-- ee --></p>
+		</div>
+		</CENTER>
+		<br>
+		<div class="mycontent">
+			<p>Hello!!! Guys nice to meet you .</p>
+			<br>
+			<p>I Ashutosh Kumar want to know your views on my website. Please don't appreciate just tell me about improvements that can satisfy your needs and then thanks me that I have completed your desire .</p>
+			<br>
+			<p>Thank You 😀😀😀😎😎😎👍👍👍👌👌👌💖💖💖👏👏👏🎉🎉🎉</p>
+			<br>
+			<p></p>
+		</div>
+
+
+
+
+
+
+		<!--
+		=========================================
+					QR CODE FOR APP
+		=========================================
+		-->
+		<center>
+			<div>
+				<img src="qrcodeforapp.PNG" alt="QR CODE For App ">
+				<br>
+				<br>
+				<p style="color: red"> or </p>
+				<p>
+					<a href="https://academy.plezmo.com/downloads/AI-ashutoshbiotech.apk">
+						Direct link ( for android user only )
+					</a>
+				</p>
+				<h5 style="color: rgb(255,255,225);">Scan above QR CODE for more fun and Entertainment </h5>
+			</div>
+		</center>
+		<br>
+		<br>
+
+
+		<!--
+		=========================================
+					form for feedback
+		=========================================
+		-->
+		<center>
+		<div class="form">
+			<form method="post" role="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVHnQwvB2LUgTffy1WEQBSWixgH0QkCi-UDxp4EbfQeZNRYQ/formResponse">
+				<h1>FEEDBACK</h1>
+                <div class="form-row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="entry.489881052" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required="required"/>
+                    <div class="validate"></div>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="email" class="form-control" name="entry.1165195425" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required="required"/>
+                    <div class="validate"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="entry.854054881" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required="required"/>
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="entry.316972159" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" id="msg" required="required"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" style="background-color: cyan; padding: 5px 30px; border-radius: 50px; outline-style: none; font-weight: bold;"><span onclick='submit()'>Send Feedback</span></button>
+                </div>
+              </form>
+		</div>
+		</center>
+	</body>
+</html>

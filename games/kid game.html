@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="icon" href="../Ai.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Kids Game</title>
+		<link rel="stylesheet" href="../bootstrap.min.css">
+		<style type="text/css" media="screen">
+		body{
+			background-color: orange;
+			cursor: pointer;
+		}
+		input{
+			background-color:#00e600;
+			margin:10px;
+			padding:10px;
+			outline-style:none;
+			font-size:20px;
+			border-radius: 20px;
+			cursor: pointer;
+		}
+		label{
+			font-size: 30px;
+		}
+		</style>
+	</head>
+	<body>
+		<center>
+		<div class="container">
+			<div class="alert alert-info font-weight-bold font-italic" style="font-size: 30px;">
+				KIDS GAME
+			</div>
+		</div>
+		<br>
+		<div class="alert-success alert" style="width: 500px;">
+			<label>Choose your option</label>
+			<br>
+			<br>
+			<input type="button" value="DIVISION" onclick="division()">
+			<br>
+			<input type="button" value="ADDITION" onclick="adding()">
+			<br>
+			<input type="button" value="SUBTRACTION" onclick="subtract()">
+			<br>
+			<input type="button" value="MULTIPLICATION" onclick="multiplicat()">
+		</div>
+		</center>
+	</body>
+	<script type="text/javascript" charset="utf-8" async defer>
+		
+		function adding() {
+			document.write('<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="icon" href="../Ai.png"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Kids Game</title><link rel="stylesheet" href="../bootstrap.min.css"><style type="text/css" media="screen">body{background-color: orange;}</style></head><body><center><div class="container"><div class="alert alert-info font-weight-bold font-italic" style="font-size: 30px;">KIDS GAME</div></div><br><div class="alert-success alert" style="width: 500px;"><br><input type="number" id="display1" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style="height: 100px;background-color: none;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><p id="display" style="font-size: 30px">+</p></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="display2" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><br><br><input id="result" type="text" name="answer" placeholder="ANSWER" style="height: 100px;width: 100px;background-color: rgb(225, 225, 225);text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"/><br><br><br><input type="button" name="RESULT" value="CHECK ANSWER" style="width: 400px;padding: 30px;font-size: 25px;background-color: green;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;outline-style: none;"onclick="add()"></div><a href=demo.html><input type="button" value=" <<< " style="background-color: cyan;border-radius: 30px;color: red; padding: 10px 15px 15px 15px;font-size: 20px;cursor: pointer;outline-style: none;" title="Go back to main menu"></a></center></body></html>');
+		
+			var y = Math.floor(Math.random()*100);
+			var a = Math.floor(Math.random()*100);
+			document.getElementById('display1').value = y;
+			document.getElementById('display2').value = a;
+		}
+
+		function multiplicat(){
+			document.write('<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="icon" href="../Ai.png"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Kids Game</title><link rel="stylesheet" href="../bootstrap.min.css"><style type="text/css" media="screen">body{background-color: orange;}</style></head><body><center><div class="container"><div class="alert alert-info font-weight-bold font-italic" style="font-size: 30px;">KIDS GAME</div></div><br><div class="alert-success alert" style="width: 500px;"><br><input type="number" id="display1" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style="height: 100px;background-color: none;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><p id="display" style="font-size: 30px">X</p></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="display2" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><br><br><input id="result" type="text" name="answer" placeholder="ANSWER" style="height: 100px;width: 100px;background-color: rgb(225, 225, 225);text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"/>			<br><br><br><input type="button" name="RESULT" value="CHECK ANSWER" style="width: 400px;padding: 30px;font-size: 25px;background-color: green;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;outline-style: none;" onclick="mul()"></div><a href=demo.html><input type="button" value=" <<< " style="background-color: cyan;border-radius: 30px;color: red; padding: 10px 15px 15px 15px;font-size: 20px;cursor: pointer;outline-style: none;" title="Go back to main menu"></a></center></body></html>');
+			var y = Math.floor(Math.random()*21);
+			var a = Math.floor(Math.random()*11);
+			document.getElementById('display1').value = y;
+			document.getElementById('display2').value = a;
+		}
+
+		function subtract(){
+			document.write('<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="icon" href="../Ai.png"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Kids Game</title><link rel="stylesheet" href="../bootstrap.min.css"><style type="text/css" media="screen">body{background-color: orange;}</style></head><body><center><div class="container"><div class="alert alert-info font-weight-bold font-italic" style="font-size: 30px;">KIDS GAME</div></div><br><div class="alert-success alert" style="width: 500px;"><br><input type="number" id="display1" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style="height: 100px;background-color: none;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><p id="display" style="font-size: 30px">-</p></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="display2" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><br><br><input id="result" type="text" name="answer" placeholder="ANSWER" style="height: 100px;width: 100px;background-color: rgb(225, 225, 225);text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"/><br><br><br><input type="button" name="RESULT" value="CHECK ANSWER" style="width: 400px;padding: 30px;font-size: 25px;background-color: green;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;outline-style: none;" onclick="sub()"></div><a href=demo.html><input type="button" value=" <<< " style="background-color: cyan;border-radius: 30px;color: red; padding: 10px 15px 15px 15px;font-size: 20px;cursor: pointer;outline-style: none;" title="Go back to main menu"></a></center></body></html>');
+			var y = Math.floor(Math.random()*100);
+			var a = Math.floor(Math.random()*100);
+			document.getElementById('display1').value = y;
+			document.getElementById('display2').value = a;
+		}
+
+		function division(){
+			document.write('<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="icon" href="../Ai.png"><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Kids Game</title><link rel="stylesheet" href="../bootstrap.min.css"><style type="text/css" media="screen">body{background-color: orange;}</style></head><body><center><div class="container"><div class="alert alert-info font-weight-bold font-italic" style="font-size: 30px;">KIDS GAME</div></div><br><div class="alert-success alert" style="width: 500px;"><br><input type="number" id="display1" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div style="height: 100px;background-color: none;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><p id="display" style="font-size: 30px">/</p></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="display2" style="font-size: 30px;height: 100px;width: 100px;background-color: rgb(0,0,0);color: white;text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"><br><br><br><input id="result" type="text" name="answer" placeholder="ANSWER" style="height: 100px;width: 100px;background-color: rgb(225, 225, 225);text-align: center;display: inline-block;border-radius: 20px;outline-style: none;"/><br><br><br><input type="button" name="RESULT" value="CHECK ANSWER" style="width: 400px;padding: 30px;font-size: 25px;background-color: green;border-bottom-left-radius: 100px;border-bottom-right-radius: 100px;outline-style: none;" onclick="div()"></div><a href=demo.html><input type="button" value=" <<< " style="background-color: cyan;border-radius: 30px;color: red; padding: 10px 15px 15px 15px;font-size: 20px;cursor: pointer;outline-style: none;" title="Go back to main menu"></a></center></body></html>');
+			var y = Math.floor(Math.random()*100 + 20);
+			var a = Math.floor(Math.random()*21);
+			document.getElementById('display1').value = y;
+			document.getElementById('display2').value = a;
+		}
+
+		function add() {
+			debugger
+			var w = document.getElementById("display1").value;
+			var q = document.getElementById("display2").value;
+			var a1 = eval(w);
+			var a2 = eval(q);
+			var s = a1 + a2;
+			var c = document.getElementById('result').value;
+			if (s == c) {
+				alert("Your answer is correct.");
+			}else{
+				alert("Your answer is wrong. correct answer is " + s);
+			}
+			var y = Math.floor(Math.random()*100);
+			var a = Math.floor(Math.random()*100);
+			document.getElementById('display1').value=y;
+			document.getElementById('display2').value=a;
+			document.getElementById('result').value='';
+		}
+
+		function mul() {
+			debugger
+			var w = document.getElementById("display1").value;
+			var q = document.getElementById("display2").value;
+			var a1 = eval(w);
+			var a2 = eval(q);
+			var s = a1 * a2;
+			var c = document.getElementById('result').value;
+			if (s == c) {
+				alert("Your answer is correct.");
+			}else{
+				alert("Your answer is wrong. correct answer is " + s);
+			}
+			var y = Math.floor(Math.random()*21);
+			var a = Math.floor(Math.random()*21);
+			document.getElementById('display1').value=y;
+			document.getElementById('display2').value=a;
+			document.getElementById('result').value='';
+		}
+
+		function sub() {
+			debugger
+			var w = document.getElementById("display1").value;
+			var q = document.getElementById("display2").value;
+			var a1 = eval(w);
+			var a2 = eval(q);
+			var s = a1 - a2;
+			var c = document.getElementById('result').value;
+			if (s == c) {
+				alert("Your answer is correct.");
+			}else{
+				alert("Your answer is wrong. correct answer is " + s);
+			}
+			var y = Math.floor(Math.random()*100);
+			var a = Math.floor(Math.random()*100);
+			document.getElementById('display1').value=y;
+			document.getElementById('display2').value=a;
+			document.getElementById('result').value='';
+		}
+
+		function div() {
+			debugger
+			var w = document.getElementById("display1").value;
+			var q = document.getElementById("display2").value;
+			var a1 = eval(w);
+			var a2 = eval(q);
+			var s = a1 / a2;
+			var sss = (a1/a2).toFixed(2);
+			var ss = (a1/a2).toFixed(1);
+			var c = document.getElementById('result').value;
+			var s1 = Math.floor(s);
+			if ((s == c)||(ss == c)||(sss == c)) {
+				alert("Your answer is correct.");
+			}else if(s1 == c){
+				alert("Your answer might be correct.");
+			}else{
+				alert("Your answer is wrong. correct answer is " + s);
+			}
+			var y = Math.floor(Math.random()*100 + 20);
+			var a = Math.floor(Math.random()*21);
+			document.getElementById('display1').value=y;
+			document.getElementById('display2').value=a;
+			document.getElementById('result').value='';
+		}
+	</script>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="../Ai.png">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- <link rel="stylesheet" href="../bootstrap.min.css"> -->
+		<title>Puzzle</title>
+		<script src="jquery.min.js"></script>
+		<style type="text/css" media="screen">
+			*{
+				margin: 0px;
+				padding: 0px;
+				box-sizing: border-box;
+				cursor: pointer;
+			}
+			body {
+				background-color: orange
+			}
+			#head{
+				font-family: Algerian;
+				font-size: 30px;
+				color: #0000ff;
+				text-shadow: 2px 2px 7px #111111;
+				text-align: center;
+				padding-top: 20px;
+				transition: all;
+				transition-duration: 2s;
+				transition-property: all;
+				transition-timing-function: ease-in-out;
+			}
+			.contain{
+				background-color: #80ffff;
+				height: 15vh;
+				border-radius: 50px;
+			}
+			.contain:hover #head{
+				color: green;
+				word-spacing: 20px;
+				letter-spacing: 10px;
+			}
+			#gamebody{
+				background-color: #33ff33;
+				border-radius: 20px;
+				align-items: center;
+			}
+			.container{
+				height: 50vh;
+				margin: 80px;
+				-moz-box-shadow: 5px 5px 5px 5px #33cc00;
+				-webkit-box-shadow: 5px 5px 5px 5px #33cc00;
+				box-shadow: 10px 10px 10px 10px #33cc00;
+			}
+			.high{
+				/*line-height: 70px;*/ 
+				
+			}
+
+			p{
+				font-size: 50px;
+				color: #ff0000;
+				padding: 10px;
+			}
+
+			.btn{
+				margin: 10px;
+				height: 50px;
+				width: 300px;
+				padding: 10px;
+				text-align: center;
+				color: #ffffff;
+				background-color: #8000ff;
+				font-size: 30px;
+				border-radius: 30px;
+				outline-style: none;
+				border-color: #000000;
+			}
+
+			input[type='button']{
+				margin: 30px;
+				padding: 10px 100px;
+				text-align: center;
+				font-size: 30px;
+				border-radius: 50px;
+				outline-style: none;
+				transition: all;
+				transition-property: all;
+				transition-duration: 2s;
+				transition-timing-function: ease-in-out;
+			}
+
+			input[type='button']:hover{
+				color: #ffffff;
+				background-color: #000000;
+			}
+
+		</style>
+	</head>
+	<body>
+		<br>
+		<center>
+			<div class="contain">
+				<div id="head">
+					SOLVE THE PUZZLES
+				</div>
+			</div>
+		</center>
+		
+
+		<center>
+			<div id="gamebody" class="container">
+				<div class="high">
+					<div>
+						<p style="line-height: 100px;">scramble this : <span></span></p>
+					</div>
+					<div>
+						<input type="text" name="" value="" placeholder="your answer" class="btn">
+					</div>
+					<div>
+						<input type="button" name="" value="CHECK IT">
+					</div>
+				</div>
+			</div>
+		</center>
+	</body>
+	<!-- <script>
+		alert("Phone view is not good for this page");
+	</script> -->
+</html>

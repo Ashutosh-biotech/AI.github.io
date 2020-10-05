@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <link rel="shortcut icon" href="Ai.png" type="image/x-icon" />
+    <title>Converter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style type="text/css" media="screen">
+      *{
+        margin: 10px;
+      }
+
+      body{
+        background-image: linear-gradient(to right, #e57713, #ec9400, #eeb000, #eace00, #e2eb12);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      fieldset{
+        border: 10px solid #33cc33;
+        border-radius: 30px;
+      }
+
+      .header{
+        text-align: center;
+        font-weight: bolder;
+        font-size: 50px;
+      }
+
+      hr{
+        border: 5px solid #0000ff;
+      }
+
+      label{
+        font-family: Comic Sans MS;
+        font-size: 20px;
+      }
+
+      input{
+        min-width: 50px;
+        min-height: 10px;
+        height: 20px;
+        width: 300px;
+      }
+    </style>
+    <header class="header">
+      CONVERTER
+    </header>
+    <hr>
+    <fieldset>
+      <legend><h2>Weight Converter</h2></legend>
+      <div style="margin:0 -16px">
+        <div>
+          <label>Pounds</label>
+          <input id="inputPounds" type="number" placeholder="Pounds" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Kilograms</label>
+          <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Ounces</label>
+          <input id="inputOunces" type="number" placeholder="Ounces" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Grams</label>
+          <input id="inputGrams" type="number" placeholder="Grams" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Stones</label>
+          <input id="inputStones" type="number" placeholder="Stones" oninput="weightConverter(this.id,this.value)" onchange="weightConverter(this.id,this.value)">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend><h2>Length Converter</h2></legend>
+      <div>
+      </div>
+      <div style="margin:0 -16px">
+        <div>
+          <label>Feet</label>
+          <input id="inputFeet" type="number" placeholder="Feet"
+          oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Meters</label>
+          <input id="inputMeters" type="number" placeholder="Meters"
+          oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Inches</label>
+          <input id="inputInches" type="number" placeholder="Inches"
+          oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>cm</label>
+          <input id="inputcm" type="number" placeholder="cm" oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Yards</label>
+          <input id="inputYards" type="number" placeholder="Yards"
+          oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Kilometers</label>
+          <input id="inputKilometers" type="number" placeholder="Kilometers"
+          oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Miles</label>
+          <input id="inputMiles" type="number" placeholder="Miles"
+          oninput="lengthConverter(this.id,this.value)" onchange="lengthConverter(this.id,this.value)">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend><h2>Temperature Converter</h2></legend>
+      <div style="margin:0 -16px">
+        <div>
+          <label>Fahrenheit</label>
+          <input id="inputFahrenheit" type="number" min="-459.66999999999996" placeholder="Fahrenheit"
+          oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Celsius</label>
+          <input id="inputCelsius" type="number" min="-273.15" placeholder="Celsius"
+          oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Kelvin</label>
+          <input id="inputKelvin" type="number" min="0" placeholder="Kelvin"
+          oninput="temperatureConverter(this.id,this.value)" onchange="temperatureConverter(this.id,this.value)">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend><h2>Speed Converter</h2></legend>
+      <div style="margin:0 -16px">
+        <div>
+          <label>MPH</label>
+          <input id="inputMPH" type="number" placeholder="MPH" oninput="speedConverter(this.id,this.value)"
+          onchange="speedConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>KPH</label>
+          <input id="inputKPH" type="number" placeholder="KPH" oninput="speedConverter(this.id,this.value)" onchange="speedConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Knots</label>
+          <input id="inputKnots" type="number" placeholder="Knots"
+          oninput="speedConverter(this.id,this.value)" onchange="speedConverter(this.id,this.value)">
+        </div>
+        <div>
+          <label>Mach</label>
+          <input id="inputMach" type="number" placeholder="Mach" oninput="speedConverter(this.id,this.value)" onchange="speedConverter(this.id,this.value)">
+        </div>
+      </div>
+    </fieldset>
+  </body>
+  <script type="text/javascript" charset="utf-8" async defer>
+    function weightConverter(source,valNum) {
+      debugger
+      valNum = parseFloat(valNum);
+      var inputPounds = document.getElementById("inputPounds");
+      var inputKilograms = document.getElementById("inputKilograms");
+      var inputOunces = document.getElementById("inputOunces");
+      var inputGrams = document.getElementById("inputGrams");
+      var inputStones = document.getElementById("inputStones");
+
+      if (source=="inputPounds") {
+        inputKilograms.value=(valNum/2.2046).toFixed(2);
+        inputOunces.value=(valNum*16).toFixed(2);
+        inputGrams.value=(valNum/0.0022046).toFixed();
+        inputStones.value=(valNum*0.071429).toFixed(3);
+      }
+
+      if (source=="inputKilograms") {
+        inputPounds.value=(valNum*2.2046).toFixed(2);
+        inputOunces.value=(valNum*35.274).toFixed(2);
+        inputGrams.value=(valNum*1000).toFixed();
+        inputStones.value=(valNum*0.1574).toFixed(3);
+      }
+
+      if (source=="inputOunces") {
+        inputPounds.value=(valNum*0.062500).toFixed(4);
+        inputKilograms.value=(valNum/35.274).toFixed(4);
+        inputGrams.value=(valNum/0.035274).toFixed(1);
+        inputStones.value=(valNum*0.0044643).toFixed(4);
+      }
+
+      if (source=="inputGrams") {
+        inputPounds.value=(valNum*0.0022046).toFixed(4);
+        inputKilograms.value=(valNum/1000).toFixed(4);
+        inputOunces.value=(valNum*0.035274).toFixed(3);
+        inputStones.value=(valNum*0.00015747).toFixed(5);
+      }
+
+      if (source=="inputStones") {
+        inputPounds.value=(valNum*14).toFixed(1);
+        inputKilograms.value=(valNum/0.15747).toFixed(1);
+        inputOunces.value=(valNum*224).toFixed();
+        inputGrams.value=(valNum/0.00015747).toFixed();
+      }
+    }
+
+    //length converter
+    function lengthConverter(source,valNum) {
+      valNum = parseFloat(valNum);
+      var inputFeet = document.getElementById("inputFeet");
+      var inputMeters = document.getElementById("inputMeters");
+      var inputInches = document.getElementById("inputInches");
+      var inputcm = document.getElementById("inputcm");
+      var inputYards = document.getElementById("inputYards");
+      var inputKilometers = document.getElementById("inputKilometers");
+      var inputMiles = document.getElementById("inputMiles");
+      var inputNauticalMiles = document.getElementById("inputNauticalMiles");
+       var inputMiles = document.getElementById("inputMiles");
+        var inputMiles = document.getElementById("inputMiles");
+         var inputMiles = document.getElementById("inputMiles");
+
+      if (source=="inputFeet") {
+        inputMeters.value=(valNum/3.2808).toFixed(2);
+        inputInches.value=(valNum*12).toFixed(2);
+        inputcm.value=(valNum/0.032808).toFixed();
+        inputYards.value=(valNum*0.33333).toFixed(2);
+        inputKilometers.value=(valNum/3280.8).toFixed(5);
+        inputMiles.value=(valNum*0.00018939).toFixed(5);
+      }
+
+      if (source=="inputMeters") {
+        inputFeet.value=(valNum*3.2808).toFixed(2); 
+        inputcm.value=(valNum/0.01).toFixed();
+        inputYards.value=(valNum*1.0936).toFixed(2);
+        inputKilometers.value=(valNum/1000).toFixed(5);
+        inputMiles.value=(valNum*0.00062137).toFixed(5);
+      }
+
+      if (source=="inputInches") {
+        inputFeet.value=(valNum*0.083333).toFixed(3);
+        inputMeters.value=(valNum/39.370).toFixed(3);
+        inputcm.value=(valNum/0.39370).toFixed(2);
+        inputYards.value=(valNum*0.027778).toFixed(3);
+        inputKilometers.value=(valNum/39370).toFixed(6);
+        inputMiles.value=(valNum*0.000015783).toFixed(6);
+      }
+
+      if (source=="inputcm") {
+        inputFeet.value=(valNum*0.032808).toFixed(3);
+        inputMeters.value=(valNum/100).toFixed(3);
+        inputInches.value=(valNum*0.39370).toFixed(2);
+        inputYards.value=(valNum*0.010936).toFixed(3);
+        inputKilometers.value=(valNum/100000).toFixed(6);
+        inputMiles.value=(valNum*0.0000062137).toFixed(6);
+      }
+
+      if (source=="inputYards") {
+        inputFeet.value=(valNum*3).toFixed();
+        inputMeters.value=(valNum/1.0936).toFixed(2);
+        inputInches.value=(valNum*36).toFixed();
+        inputcm.value=(valNum/0.010936).toFixed();
+        inputKilometers.value=(valNum/1093.6).toFixed(5);
+        inputMiles.value=(valNum*0.00056818).toFixed(5);
+      }
+
+      if (source=="inputKilometers") {
+        inputFeet.value=(valNum*3280.8).toFixed();
+        inputMeters.value=(valNum*1000).toFixed();
+        inputInches.value=(valNum*39370).toFixed();
+        inputcm.value=(valNum*100000).toFixed();
+        inputYards.value=(valNum*1093.6).toFixed();
+        inputMiles.value=(valNum*0.62137).toFixed(2);
+      }
+
+      if (source=="inputMiles") {
+        inputFeet.value=(valNum*5280).toFixed();
+        inputMeters.value=(valNum/0.00062137).toFixed();
+        inputInches.value=(valNum*63360).toFixed(); 
+        inputcm.value=(valNum/0.0000062137).toFixed();
+        inputYards.value=(valNum*1760).toFixed();
+        inputKilometers.value=(valNum/0.62137).toFixed(2);
+      }
+
+      if (source=="inputNauticalMiles") {
+        inputFeet.value=(valNum*5280).toFixed();
+        inputMeters.value=(valNum/0.00062137).toFixed();
+        inputInches.value=(valNum*63360).toFixed(); 
+        inputcm.value=(valNum/0.0000062137).toFixed();
+        inputYards.value=(valNum*1760).toFixed();
+        inputKilometers.value=(valNum/0.62137).toFixed(2);
+      }
+    } 
+
+    //Tempreture converter
+    function temperatureConverter(source,valNum) {
+      valNum = parseFloat(valNum);
+      var inputFahrenheit = document.getElementById("inputFahrenheit");
+      var inputCelsius = document.getElementById("inputCelsius");
+      var inputKelvin = document.getElementById("inputKelvin");
+
+      if (source=="inputFahrenheit") {
+        inputCelsius.value=((valNum-32)/1.8).toFixed(2); 
+        inputKelvin.value=(((valNum-32)/1.8)+273.15).toFixed(2);
+      }
+
+      if (source=="inputCelsius") {
+        inputFahrenheit.value=((valNum*1.8)+32).toFixed(2);
+        inputKelvin.value=((valNum)+273.15).toFixed(2);
+      }
+
+      if (source=="inputKelvin") {
+        inputFahrenheit.value=(((valNum-273.15)*1.8)+32).toFixed(2);
+        inputCelsius.value=((valNum)-273.15).toFixed(2);
+      }
+    } 
+
+    //speed converter
+    function speedConverter(source,valNum) {
+      valNum = parseFloat(valNum);
+      var inputMPH = document.getElementById("inputMPH");
+      var inputKPH = document.getElementById("inputKPH");
+      var inputKnots = document.getElementById("inputKnots");
+      var inputMach = document.getElementById("inputMach");
+
+      if (source=="inputMPH") {
+        inputKPH.value=(valNum*1.609344).toFixed(2); 
+
+        inputKnots.value=(valNum/1.150779).toFixed(2);
+        inputMach.value=(valNum/761.207).toFixed(4);
+      }
+
+      if (source=="inputKPH") {
+        inputMPH.value=(valNum/1.609344).toFixed(2);
+        inputKnots.value=(valNum/1.852).toFixed(2);
+        inputMach.value=(valNum/1225.044).toFixed(5);
+      }
+
+      if (source=="inputKnots") {
+
+      inputMPH.value=(valNum*1.150779).toFixed(2);
+      inputKPH.value=(valNum*1.852).toFixed(2);
+      inputMach.value=(valNum/661.4708).toFixed(4);
+      }
+
+      if (source=="inputMach") {
+      inputMPH.value=(valNum*761.207).toFixed();
+      inputKPH.value=(valNum*1225.044).toFixed();
+      inputKnots.value=(valNum*661.4708).toFixed();
+      }
+    }
+  </script>
+</html>
