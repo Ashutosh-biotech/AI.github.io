@@ -9,6 +9,7 @@
     <!-- Favicons -->
     <link href="Ai.png" rel="icon">
     <!-- CSS Files -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -636,23 +637,24 @@
               </div>
             </div>
             <div class="col-lg-8 mt-5 mt-lg-0">
-              <form method="post" role="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVHnQwvB2LUgTffy1WEQBSWixgH0QkCi-UDxp4EbfQeZNRYQ/formResponse">
+              <form method="post" role="form" action="https://ashutosh2020.pythonanywhere.com/">
                 <div class="form-row">
                   <div class="col-md-6 form-group">
-                    <input type="text" name="entry.489881052" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required="required"/>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required="required"/>
                     <div class="validate"></div>
                   </div>
                   <div class="col-md-6 form-group">
-                    <input type="email" class="form-control" name="entry.1165195425" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required="required"/>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" required="required"/>
                     <div class="validate"></div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="entry.854054881" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" required="required"/>
+                  <input type="radio" name="gender" value="male" class="w3-margin-right w3-radio" checked><span class="w3-large">Male</span><wbr>
+                  <input type="radio" name="gender" value="female" class="w3-margin-left w3-margin-right w3-radio"><span class="w3-large">Female</span>
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <textarea class="form-control" name="entry.316972159" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" id="msg" required="required"></textarea>
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message" id="msg" required="required"></textarea>
                   <div class="validate"></div>
                 </div>
                 <div class="text-center">
